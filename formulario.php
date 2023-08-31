@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php require('conexion.php'); ?>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -14,16 +16,16 @@
         <a href="formulario.php">Formulario</a>
     </div>
 
-    <form action="formulario.html" method="get">
+    <form action="store.php" name="formulario" method="POST">
         <section>
             <div>
                 <label for="name"> Nombre:
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre">
                 </label>
             </div> 
             <div>
                 <label for="email"> Correo:
-                    <input type="email" name="correo" required>
+                    <input type="email" name="correo">
                 </label>
             </div>
             <div>
@@ -34,7 +36,7 @@
             </div>
             <div>
                 <label for="passw"> Contraseña:
-                    <input type="password" name="contra" required>
+                    <input type="password" name="contra">
                 </label>
             </div>
             <div>
@@ -46,7 +48,7 @@
 
             <div class="selectOp">
                 <label>Ciudad:</label>
-                <select name="ciudad" required>
+                <select name="ciudad">
                     <option value="">Elije una opción</option>
                     <option value="guadalajara">Guadalajara</option>
                     <option value="tlaquepaque">San Pedro Tlaquepaque</option>
@@ -57,9 +59,9 @@
             <div>
                 <fieldset>
                     <legend>¿Me interesa contratarte?</legend>
-                        <input type="checkbox" name="contratar" value="si" required>
+                        <input type="checkbox" name="contratar" value="si">
                         <label for="si">Sí</label><br>
-                        <input type="checkbox" name="contratar" value="no" required>
+                        <input type="checkbox" name="contratar" value="no">
                         <label for="no">No</label><br>
                 </fieldset>
             </div>
